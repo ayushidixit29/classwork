@@ -1,0 +1,64 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a[3][3],b[3][3],i,j,k,result[3][3]={0};
+    cout<<"Enter First Matrix Elements"<<endl;
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cout<<"enter number in pocket["<<i<<"] ["<<j<<"]";
+            cin>>a[i][j];
+        }
+    }
+    cout<<"first matrix is . . ."<<endl;
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cout<<a[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    cout<<"Enter Second Matrix Elements"<<endl;
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cout<<"enter number in pocket["<<i<<"] ["<<j<<"]";
+            cin>>b[i][j];
+        }
+    }
+    cout<<"Second matrix is . . ."<<endl;
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cout<<b[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            for (k=0;k<3;k++)
+            {
+                result [i][j]=result[i][j]+a[i][k]*b[k][j];
+            }
+        }
+    }
+    cout<<"multiplication of two matrix is. . ."<<endl;
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cout<<result[i][j]<<"  ";
+        }
+        cout<<endl;
+    }
+return 0;
+    
+}
